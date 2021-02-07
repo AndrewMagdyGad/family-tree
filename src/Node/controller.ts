@@ -22,4 +22,14 @@ export class NodeController {
   ) {
     return this.nodeService.createFamilyTree(tree);
   }
+
+  @Post('computeLegacy')
+  computeLegacy(
+    @Body()
+    payload: {
+      _id: string;
+    },
+  ) {
+    return this.nodeService.computeLegacy(payload._id);
+  }
 }
