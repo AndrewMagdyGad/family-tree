@@ -227,9 +227,9 @@ export class NodeService {
         map.get('son').length * 2 +
         (map.has('daughter') ? map.get('daughter').length : 0);
 
-      if (map.has('daughter')) {
-        total -= temp;
-      }
+      // if (map.has('daughter')) {
+      total -= temp;
+      // }
 
       const sonIds = map.get('son');
       const sons = new Array<string>();
